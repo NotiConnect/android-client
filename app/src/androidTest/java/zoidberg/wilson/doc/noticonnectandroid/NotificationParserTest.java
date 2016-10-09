@@ -26,18 +26,27 @@ import static org.junit.Assert.assertArrayEquals;
 @RunWith(JUnit4.class)
 public class NotificationParserTest {
 
+    // Constants
     private final String TAG = this.getClass().getSimpleName();
 
+    // Member variables
     private Context mContext;
     private NotificationParser mNotificationParser;
     private final Notification mTestNotification;
 
+    /**
+     * Test the functionality of the NotificationParser class
+     */
     public NotificationParserTest() {
         mContext = InstrumentationRegistry.getTargetContext();
         mTestNotification = buildTestNotification();
         mNotificationParser = new NotificationParser(mContext, mTestNotification, TAG);
     }
 
+    /**
+     * Build a sample notification
+     * @return Notification
+     */
     private Notification buildTestNotification() {
         Notification.Builder nb = new Notification.Builder(mContext);
         nb.setContentText("Test notification");
@@ -47,6 +56,11 @@ public class NotificationParserTest {
         return nb.build();
     }
 
+    /**
+     * Extract a Bitmap object from an Icon
+     * @param icon
+     * @return Bitmap
+     */
     private Bitmap extractBitmapFromIcon(Icon icon) {
         Drawable drawable = icon.loadDrawable(mContext);
         Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
@@ -54,6 +68,11 @@ public class NotificationParserTest {
         return bitmap;
     }
 
+    /**
+     * Test that compare the byte array's between two of the same icons.
+     * One however, has been derived from the Base64 hash of the other.
+     * @throws Exception
+     */
     @Test
     public void iconDecodedByteArrayTest() throws Exception {
         Icon originalIcon = mNotificationParser.getIcon();

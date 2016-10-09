@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.util.Base64;
 
 import java.io.ByteArrayOutputStream;
-import java.io.OutputStream;
 
 /**
  * Created by doc on 10/8/16.
@@ -18,12 +17,13 @@ import java.io.OutputStream;
 
 public class NotificationParser {
 
+    // Constants
     public static final String NOTIFICATION_TITLE = "android.title";
     public static final String NOTIFICATION_TEXT = "android.text";
     public static final String NOTIFICATION_SUB_TEXT = "android.subText";
 
+    // Member variables
     private Context mContext;
-
     private final Bundle mNotificationBundle;
     private final String mPackageName;
     private final String mGroup;
@@ -31,7 +31,8 @@ public class NotificationParser {
     private final Icon mLargeIcon;
 
     /**
-     *
+     * Helper class to make retrieving relevant data from Notification
+     * instances easier for interacting with client services
      * @param context
      * @param notification
      * @param packageName
@@ -78,7 +79,8 @@ public class NotificationParser {
     }
 
     /**
-     * 
+     * Get the notification's group
+     * @return String
      */
     public final String getGroup() {
         return mGroup;
@@ -93,7 +95,8 @@ public class NotificationParser {
     }
 
     /**
-     * Get the icon as Base64 string with URL_SAFE flags
+     * Get the notification's icon and encode it
+     * into a Base64 string with URL_SAFE flags
      * @return String
      */
     public final String getIconBase64() {
@@ -101,8 +104,10 @@ public class NotificationParser {
     }
 
     /**
-     *
+     * Get the notification's icon and encode it
+     * into a Base64 string
      * @param flags
+     * @return String
      */
     public final String getIconBase64(int flags) {
         byte[] icon = getIconByteArray();
@@ -110,7 +115,8 @@ public class NotificationParser {
     }
 
     /**
-     * 
+     * Get the notification's icon as a byte array
+     * @return byte[]
      */
     public final byte[] getIconByteArray() {
         Drawable drawable = getIcon().loadDrawable(mContext);
