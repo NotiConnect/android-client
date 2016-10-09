@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import zoidberg.wilson.doc.notilib.NotiService;
+import zoidberg.wilson.doc.notiservicelib.NotiService;
 
 public class ControlActivity extends AppCompatActivity {
 

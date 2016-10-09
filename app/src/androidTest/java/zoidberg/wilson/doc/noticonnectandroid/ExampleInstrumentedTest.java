@@ -1,24 +1,11 @@
 package zoidberg.wilson.doc.noticonnectandroid;
 
-import android.app.Notification;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.Icon;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
-import android.util.Base64;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import java.io.ByteArrayOutputStream;
-
-import javax.annotation.Resource;
-
-import zoidberg.wilson.doc.notilib.NotificationParser;
 
 import static org.junit.Assert.*;
 

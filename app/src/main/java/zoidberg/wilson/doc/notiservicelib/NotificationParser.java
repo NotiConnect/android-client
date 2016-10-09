@@ -1,4 +1,4 @@
-package zoidberg.wilson.doc.notilib;
+package zoidberg.wilson.doc.notiservicelib;
 
 import android.app.Notification;
 import android.content.Context;

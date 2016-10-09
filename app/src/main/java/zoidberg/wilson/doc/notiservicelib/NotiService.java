@@ -1,30 +1,10 @@
-package zoidberg.wilson.doc.notilib;
+package zoidberg.wilson.doc.notiservicelib;
 
 import android.accessibilityservice.AccessibilityService;
-import android.annotation.TargetApi;
 import android.app.Notification;
-import android.app.Service;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.media.ImageReader;
-import android.os.Build;
-import android.os.Bundle;
-import android.os.IBinder;
 import android.os.Parcelable;
-import android.service.notification.StatusBarNotification;
-import android.support.annotation.RequiresApi;
-import android.util.Base64;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
-import android.view.accessibility.AccessibilityNodeInfo;
-import android.view.inputmethod.InputConnection;
-import android.widget.Toast;
-
-import java.io.ByteArrayOutputStream;
-import java.util.ArrayList;
-import java.util.Hashtable;
 
 public class NotiService extends AccessibilityService {
 

@@ -3,7 +3,6 @@ package zoidberg.wilson.doc.noticonnectandroid;
 import android.app.Notification;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
@@ -16,7 +15,7 @@ import org.junit.runners.JUnit4;
 
 import java.io.ByteArrayOutputStream;
 
-import zoidberg.wilson.doc.notilib.NotificationParser;
+import zoidberg.wilson.doc.notiservicelib.NotificationParser;
 
 import static org.junit.Assert.assertArrayEquals;
 
