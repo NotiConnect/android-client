@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NotiConnect Android</string>
+
+    <string name="status_label">Deactivated</string>
+    <string name="server_address_label">Not Connected!</string>
+
+    <string name="toggle_service_button">Toggle</string>
+    <string name="post_notification">Post Notification</string>
+</resources>
