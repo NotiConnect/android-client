@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+				  android:layout_width = "match_parent"
+				  android:layout_height = "match_parent"
+				  android:orientation = "vertical"
+	>
+	<TextView
+        android:id="@+id/status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_label"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/server_address_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/server_address_label"
+        android:textSize="18dp"
+        android:layout_below="@id/status_label"/>
+
+    <Button
+        android:id="@+id/toggle_service_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toggle_service_button"
+        android:layout_below="@id/server_address_label"/>
+
+    <Button
+        android:id="@+id/post_notification_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/post_notification"
+        android:layout_below="@id/toggle_service_button"/>
+</LinearLayout >
