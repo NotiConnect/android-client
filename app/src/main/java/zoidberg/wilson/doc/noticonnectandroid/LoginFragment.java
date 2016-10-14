@@ -1,7 +1,13 @@
-package edu.kvcc.cis298.w.noticonnectandroidclient;
+package zoidberg.wilson.doc.noticonnectandroid;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AutoCompleteTextView;
+import android.widget.EditText;
 
 /**
  * Purpose:
@@ -35,7 +41,38 @@ class LoginFragment
 		fragment.setArguments( args );
 		return fragment;
 	}
-	// constructors
+
+	@Override
+	public
+	void onCreate(
+		@Nullable
+			Bundle savedInstanceState
+					 )
+	{
+		super.onCreate( savedInstanceState );
+	}
+
+	@Nullable
+	@Override
+	public
+	View onCreateView(
+		LayoutInflater inflater,
+		@Nullable
+			ViewGroup container,
+		@Nullable
+			Bundle savedInstanceState
+						  )
+	{
+		View view
+			  = inflater.inflate(
+			R.layout.fragment_login,
+			container,
+			false
+									  );
+		// find view by ids
+		return view;
+	}
+// constructors
 	// protected methods
 	// private methods
 	// private classes

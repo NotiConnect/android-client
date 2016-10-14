@@ -1,4 +1,4 @@
-package edu.kvcc.cis298.w.noticonnectandroidclient;
+package zoidberg.wilson.doc.noticonnectandroid;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +15,7 @@ import android.widget.TextView;
 
 import zoidberg.wilson.doc.notiservicelib.NotiService;
 
-public class ControlActivity extends AppCompatActivity {
+public class ControlActivity extends SingleFragmentActivity {
 
     private final String TAG = this.getClass().getSimpleName();
 
@@ -24,7 +25,7 @@ public class ControlActivity extends AppCompatActivity {
     private TextView mStatusLabel;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_control);
 
@@ -73,6 +74,13 @@ public class ControlActivity extends AppCompatActivity {
             }
         };
         mHandler.postDelayed(runnable, 1000);
+    }
+
+    @Override
+    protected
+    Fragment createFragment()
+    {
+        return new LoginFragment();
     }
 
     private boolean isMyServiceRunning(Class<?> serviceClass) {
